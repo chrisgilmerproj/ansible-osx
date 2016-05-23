@@ -1,0 +1,2 @@
+[localhost]
+wookie ansible_connection=local

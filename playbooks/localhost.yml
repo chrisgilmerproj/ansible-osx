@@ -1,0 +1,7 @@
+---
+- name: Manage local computer
+  hosts: localhost
+  roles:
+    - common
+    - homebrew
+    - python
