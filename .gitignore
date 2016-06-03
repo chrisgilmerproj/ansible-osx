@@ -1,0 +1,5 @@
+*.py[c|o]
+*.retry
+*.swp
+ansible.log
+src/
