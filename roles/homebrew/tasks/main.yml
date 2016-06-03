@@ -1,16 +1,23 @@
 ---
-- homebrew: name=autoconf
-- homebrew: name=git
-- homebrew: name=ipcalc
-- homebrew: name=jq
-- homebrew: name=node
-- homebrew: name=openssl
-- homebrew: name=pkg-config
-- homebrew: name=pwgen
-- homebrew: name=pyenv
-- homebrew: name=readline
-- homebrew: name=readline
-- homebrew: name=ssh-copy-id
-- homebrew: name=vim
-- homebrew: name=wget
-- homebrew: update_homebrew=yes upgrade_all=yes
+- name: Install homebrew packages
+  homebrew: name=autoconf
+  with_items:
+    - autoconf
+    - git
+    - ipcalc
+    - jq
+    - node
+    - openssl
+    - pkg-config
+    - pwgen
+    - pyenv
+    - readline
+    - readline
+    - ssh-copy-id
+    - vim
+    - wget
+
+- name: Update Homebrew and Upgrade Packages
+  homebrew: update_homebrew=yes
+            upgrade_all=yes
+  ignore_errors: True

@@ -15,6 +15,12 @@ For instance:
 $ ansible-playbook playbooks/localhost.yml --check
 ```
 
+Then run with:
+
+```sh
+$ ansible-playbook playbooks/localhost.yml --diff --ask-sudo-pass
+```
+
 ## Quickstart
 
 You will need to install Python and Pip to get started.  Then run the install

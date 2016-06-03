@@ -1,0 +1,4 @@
+---
+dependencies:
+  - {role: homebrew, tags: ['homebrew']}
+  - {role: python, tags: ['python']}

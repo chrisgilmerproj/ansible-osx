@@ -1,15 +1,19 @@
 ---
 - name: Install python versions
-  command: pyenv install -s {{item}}
+  command: "pyenv install -s {{item}}"
   with_items: "{{ versions }}"
 
 - name: Set global python
-  command: pyenv global {{ versions | join(" ") }}
+  command: "pyenv global {{versions | join(' ')}}"
 
-- pip: name=pip state=latest
-- pip: name=virtualenv state=latest
-- pip: name=ansible state=latest
-- pip: name=flake8 state=latest
-- pip: name=awscli state=latest
-- pip: name=ipython state=latest
-- pip: name=yapf state=latest
+- name: Install Python Packages
+  pip: name="{{item}}"
+       state=latest
+  with_items:
+    - pip
+    - virtualenv
+    - ansible
+    - flake8
+    - awscli
+    - ipython
+    - yapf

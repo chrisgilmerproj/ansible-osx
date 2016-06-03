@@ -1,0 +1,24 @@
+---
+- name: Personal Directory
+  file: path="{{homedir}}/{{username}}/{{personal_dir}}"
+        state=directory
+        owner="{{username}}"
+        group="{{usergroup}}"
+        mode=0755
+
+- name: Install silliness
+  git: repo="git@github.com:{{git_username}}/silliness.git"
+       dest="{{homedir}}/{{username}}/{{personal_dir}}/silliness"
+       accept_hostkey=True
+  tags:
+    - repos
+
+- name: Set Screen Attributes
+  command: "pmset -a {{item}} 0"
+  become: True
+  with_items:
+    - darkwakes
+    - standby
+    - standbydelay
+  tags:
+    - system
