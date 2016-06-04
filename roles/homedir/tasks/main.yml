@@ -2,6 +2,7 @@
 - name: Install homedir
   git: repo="git@github.com:{{git_username}}/homedir.git"
        dest="{{homedir}}/{{username}}/{{personal_dir}}/homedir"
+       version=master
        accept_hostkey=True
   tags:
     - homedir
@@ -28,7 +29,6 @@
     - .irbrc
     - .screenrc
     - .tmux.conf
-    - .vim
     - .vimrc
     - bin
   tags:
@@ -36,9 +36,39 @@
     - links
     - vim
 
-- name: Install Vim Syntastic
+- name: Create .vim directories
+  file: path="{{homedir}}/{{username}}/.vim/{{item}}"
+        state=directory
+        owner="{{username}}"
+        group="{{usergroup}}"
+        mode=0755
+  with_items:
+    - autoload
+    - bundle
+    - colors
+  tags:
+    - homedir
+    - vim
+
+- name: Symlink Vim files
+  file: src="{{homedir}}/{{username}}/{{personal_dir}}/homedir/{{item}}"
+        dest="{{homedir}}/{{username}}/{{item}}"
+        owner="{{username}}"
+        group="{{usergroup}}"
+        state=link
+  with_items:
+    - .vim/autoload/pathogen.vim
+    - .vim/colors/Tomorrow-Night.vim
+  tags:
+    - homedir
+    - links
+    - vim
+
+- name: Install Vim Bundles
   git: repo="git@github.com:/{{item.user}}/{{item.repo}}.git"
        dest="{{homedir}}/{{username}}/.vim/bundle/{{item.repo}}"
+       version=master
+       force=yes
        accept_hostkey=True
   with_items:
     - {user: scrooloose, repo: syntastic}
