@@ -2,6 +2,6 @@
 - name: Manage local computer
   hosts: localhost
   roles:
-    - common
-    - osx
-    - homedir
+    - {role: common, tags: ['common']}
+    - {role: osx, tags: ['osx']}
+    - {role: homedir, tags: ['homedir']}
