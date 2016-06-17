@@ -19,6 +19,7 @@
     - .bash
     - .bash_profile
     - .bashrc
+    - .config
     - .gdbinit
     - .gemrc
     - .gitconfig
