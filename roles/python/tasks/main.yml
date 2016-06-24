@@ -13,7 +13,9 @@
     - pip
     - virtualenv
     - awscli
+    - boto
     - flake8
     - ipython
     - isort
+    - troposphere
     - yapf
