@@ -12,8 +12,8 @@
   with_items:
     - pip
     - virtualenv
-    - flake8
     - awscli
+    - flake8
     - ipython
+    - isort
     - yapf
-    # - ansible
