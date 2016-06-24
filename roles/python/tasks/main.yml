@@ -17,5 +17,6 @@
     - flake8
     - ipython
     - isort
+    - tox
     - troposphere
     - yapf
