@@ -28,6 +28,7 @@
     - .inputrc
     - .ipython
     - .irbrc
+    - .isort.cfg
     - .screenrc
     - .tmux.conf
     - .vimrc
