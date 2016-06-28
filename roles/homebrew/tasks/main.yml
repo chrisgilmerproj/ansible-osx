@@ -3,6 +3,7 @@
   homebrew: name=autoconf
   with_items:
     - autoconf
+    - gcc
     - git
     - ipcalc
     - jq
