@@ -54,12 +54,20 @@
     - flake8
     - ipython
     - isort
-    - matlpotlib
-    - numpy
-    - scipy
     - tox
     - troposphere
     - yapf
+
+- name: Install Python Science Packages (2.7.12)
+  pip: name="{{item}}"
+       state=latest
+       executable=/Users/christophergi/.pyenv/shims/pip2.7
+  with_items:
+    - numpy
+    - scipy
+    - matplotlib
+    - pandas
+    - jupyter
 
 - name: Install Python Packages (3.5)
   pip: name="{{item[1]}}"
