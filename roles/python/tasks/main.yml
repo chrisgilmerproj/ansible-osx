@@ -9,6 +9,7 @@
 - name: Install Python Packages
   pip: name="{{item}}"
        state=latest
+       executable=/Users/christophergi/.pyenv/shims/pip2.7
   with_items:
     - pip
     - virtualenv
