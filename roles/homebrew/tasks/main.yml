@@ -4,10 +4,12 @@
   with_items:
     - autoconf
     - expat
+    - freetype
     - gcc
     - git
     - ipcalc
     - jq
+    - libpng
     - node
     - openssl
     - pkg-config
