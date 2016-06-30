@@ -1,9 +1,14 @@
 ---
+- name: Install command line tools
+  command: xcode-select --install
+  ignore_errors: True
+
 - name: Install homebrew packages
   homebrew: name="{{item}}"
   with_items:
     - autoconf
-    - expat
+    - cmake
+      #- expat
     - freetype
     - gcc
     - git
