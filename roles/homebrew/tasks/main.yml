@@ -1,6 +1,6 @@
 ---
 - name: Install homebrew packages
-  homebrew: name=autoconf
+  homebrew: name="{{item}}"
   with_items:
     - autoconf
     - expat
