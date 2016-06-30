@@ -1,27 +1,27 @@
 ---
 - name: Install python versions (2.7.12)
-  command: "pyenv install -s {{item}}"
+  command: "pyenv install -f {{item}}"
   environment:
     CFLAGS: "{{cflags}}"
     LDFLAGS: "{{ldflags}}"
-    PYTHON_CONFIGURE_OPTS: "--enable-unicode=ucs2 --framework"
+    PYTHON_CONFIGURE_OPTS: "{{pyflags}}"
   with_items:
     - 2.7.12
 
 - name: Install python versions (3.5.1, 3.4.4)
-  command: "pyenv install -s {{item}}"
+  command: "pyenv install -f {{item}}"
   environment:
     CFLAGS: "{{cflags}}"
     LDFLAGS: "{{ldflags}}"
+    PYTHON_CONFIGURE_OPTS: "{{pyflags}}"
   with_items:
     - 3.5.1
     - 3.4.4
 
 - name: Install python versions
-  command: "pyenv install -s {{item}}"
+  command: "pyenv install -f {{item}}"
   with_items:
     - 3.3.6
-    - 2.6.9
 
 - name: Set global python
   command: "pyenv global {{versions | join(' ')}}"
@@ -30,6 +30,7 @@
   command: "pyenv uninstall -f {{item}}"
   with_items:
     - 2.7.11
+    - 2.6.9
 
 - name: Install Crypto Packages (2.7.12)
   pip: name="{{item}}"

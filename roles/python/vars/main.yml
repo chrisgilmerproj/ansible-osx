@@ -1,8 +1,8 @@
 cflags: -I/usr/local/opt/readline/include -I/usr/local/opt/openssl/include
 ldflags: -L/usr/local/opt/readline/lib -L/usr/local/opt/openssl/lib
+pyflags: --enable-unicode=ucs2 --enable-framework CC=clang
 versions:
   - 2.7.12
   - 3.5.1
   - 3.4.4
   - 3.3.6
-  - 2.6.9
