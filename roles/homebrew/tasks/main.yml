@@ -8,7 +8,7 @@
   with_items:
     - autoconf
     - cmake
-      #- expat
+    #- expat
     - freetype
     - gcc
     - git
@@ -23,6 +23,7 @@
     - readline
     - ssh-copy-id
     - vim
+    - watch
     - wget
 
 - name: Update Homebrew and Upgrade Packages
