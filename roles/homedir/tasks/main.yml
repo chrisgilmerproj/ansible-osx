@@ -33,6 +33,7 @@
     - .tmux.conf
     - .vimrc
     - bin
+    - exclude.list
   tags:
     - homedir
     - links
