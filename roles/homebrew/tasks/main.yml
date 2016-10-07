@@ -7,6 +7,7 @@
   homebrew: name="{{item}}"
   with_items:
     - autoconf
+    - bash
     - cmake
     #- expat
     - freetype
@@ -30,3 +31,9 @@
   homebrew: update_homebrew=yes
             upgrade_all=yes
   ignore_errors: True
+
+# add line in file
+# echo /usr/local/bin/bash >> /etc/shells
+
+# set default shell
+# chsh -s /usr/local/bin/bash
