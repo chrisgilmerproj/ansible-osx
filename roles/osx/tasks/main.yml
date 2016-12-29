@@ -6,10 +6,19 @@
         group="{{usergroup}}"
         mode=0755
 
-- name: Install silliness
-  git: repo="git@github.com:{{git_username}}/silliness.git"
-       dest="{{homedir}}/{{username}}/{{personal_dir}}/silliness"
+- name: Install personal repos
+  git: repo="git@github.com:{{git_username}}/{{item}}.git"
+       dest="{{homedir}}/{{username}}/{{personal_dir}}/{{item}}"
        accept_hostkey=True
+  with_items:
+    - brewday
+    - brewdata
+    - brewsci
+    - freenas-crashplan-howto
+    - parker
+    - s3diff
+    - silliness
+    - slack-webhooks
   tags:
     - repos
 
