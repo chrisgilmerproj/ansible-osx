@@ -1,4 +1,11 @@
 ---
+- name: SSH Keys Directory
+  file: path="{{homedir}}/{{username}}/.ssh/keys/"
+        state=directory
+        owner="{{username}}"
+        group="{{usergroup}}"
+        mode=0755
+
 - name: Personal Directory
   file: path="{{homedir}}/{{username}}/{{personal_dir}}"
         state=directory
