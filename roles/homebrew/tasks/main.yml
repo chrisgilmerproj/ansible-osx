@@ -7,15 +7,23 @@
   homebrew: name="{{item}}"
   with_items:
     - autoconf
+    - automake
     - bash
     - cmake
+    - erlang
     #- expat
     - freetype
     - gcc
     - git
     - ipcalc
+    - jpeg
     - jq
     - libpng
+    - libtiff
+    - libtool
+    - libyaml
+    - little-cms
+    - ossp-uuid
     - node
     - openssl
     - pkg-config

@@ -2,7 +2,7 @@
 
 echo
 echo "Install ansible and required python requirements"
-pip install -r requirements/python.txt
+sudo pip install -r requirements/python.txt
 
 echo
 echo "Install ansible galaxy requirements"
