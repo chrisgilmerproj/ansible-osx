@@ -30,6 +30,7 @@
     - .ipython
     - .irbrc
     - .isort.cfg
+    - .npmrc
     - .screenrc
     - .tmux.conf
     - .vimrc
