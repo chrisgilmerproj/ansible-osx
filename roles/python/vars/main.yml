@@ -4,6 +4,7 @@ pyflags: --enable-framework
 cc: clang
 versions:
   - 2.7.13
-  - 3.5.2
-  - 3.4.5
+  - 3.6.1
+  - 3.5.3
+  - 3.4.6
   - 3.3.6
