@@ -24,7 +24,6 @@
     - libyaml
     - little-cms
     - ossp-uuid
-    - node
     - openssl
     - pkg-config
     - pwgen
