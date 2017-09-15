@@ -31,6 +31,7 @@
     - {name: pwgen, install_options: ""}
     - {name: pyenv, install_options: ""}
     - {name: readline, install_options: ""}
+    - {name: screen, install_options: ""}
     - {name: ssh-copy-id, install_options: ""}
     - {name: vim, install_options: "with-python3"}
     - {name: watch, install_options: ""}
