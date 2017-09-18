@@ -67,6 +67,7 @@
     - flake8
     - ipython
     - isort
+    - powerline-status
     - tox
     - troposphere
     - yapf
@@ -88,4 +89,4 @@
        executable="/Users/{{username}}/.pyenv/shims/{{item[0]}}"
   with_nested:
     - ['pip3.6', 'pip3.5', 'pip3.4']
-    - ['flake8', 'ipython', 'isort', 'tox', 'yapf']
+    - ['flake8', 'ipython', 'isort', 'powerline-status', 'tox', 'yapf']
