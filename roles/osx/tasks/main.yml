@@ -29,15 +29,15 @@
   tags:
     - repos
 
-- name: Set Screen Attributes
-  command: "pmset -a -b {{item.setting}} {{item.value}}"
-  become: True
-  with_items:
-    - setting: standby
-      value: 0
-    - setting: standbydelay
-      value: 0
-    - setting: autopoweroffdelay
-      value: 3600
-  tags:
-    - system
+# - name: Set Screen Attributes
+#   command: "pmset -a -b {{item.setting}} {{item.value}}"
+#   become: True
+#   with_items:
+#     - setting: standby
+#       value: 0
+#     - setting: standbydelay
+#       value: 0
+#     - setting: autopoweroffdelay
+#       value: 3600
+#   tags:
+#     - system
