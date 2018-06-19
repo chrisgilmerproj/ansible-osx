@@ -11,11 +11,14 @@
     - {name: autoconf, install_options: ""}
     - {name: automake, install_options: ""}
     - {name: bash, install_options: ""}
+    - {name: chamber, install_options: ""}
     - {name: cmake, install_options: ""}
+    - {name: direnv, install_options: ""}
     - {name: erlang, install_options: ""}
     - {name: freetype, install_options: ""}
     - {name: gcc, install_options: ""}
     - {name: git, install_options: ""}
+    - {name: go, install_options: ""}
     - {name: grep, install_options: "with-default-names"}
     - {name: ipcalc, install_options: ""}
     - {name: jpeg, install_options: ""}
@@ -28,15 +31,26 @@
     - {name: ossp-uuid, install_options: ""}
     - {name: openssl, install_options: ""}
     - {name: pkg-config, install_options: ""}
+    - {name: pre-commit, install_options: ""}
     - {name: pwgen, install_options: ""}
     - {name: pyenv, install_options: ""}
     - {name: readline, install_options: ""}
     - {name: screen, install_options: ""}
+    - {name: shellcheck, install_options: ""}
     - {name: ssh-copy-id, install_options: ""}
+    - {name: terraform, install_options: ""}
     - {name: thefuck, install_options: ""}
     - {name: vim, install_options: "with-python3"}
     - {name: watch, install_options: ""}
     - {name: wget, install_options: ""}
+    - {name: yarn, install_options: ""}
+
+- name: Install homebrew cask packages
+  homebrew_cask:
+    name: "{{item.name}}"
+    install_options: "{{item.install_options}}"
+  with_items:
+    - {name: aws-vault, install_options: ""}
 
 - name: Update Homebrew and Upgrade Packages
   homebrew: update_homebrew=yes
