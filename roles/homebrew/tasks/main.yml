@@ -39,6 +39,7 @@
     - {name: shellcheck, install_options: ""}
     - {name: ssh-copy-id, install_options: ""}
     - {name: terraform, install_options: ""}
+    - {name: terraform-docs, install_options: ""}
     - {name: thefuck, install_options: ""}
     - {name: vim, install_options: "with-python3"}
     - {name: watch, install_options: ""}
