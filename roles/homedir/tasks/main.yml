@@ -80,6 +80,7 @@
     - {user: scrooloose, repo: syntastic}
     - {user: scrooloose, repo: nerdtree}
     - {user: editorconfig, repo: editorconfig-vim}
+    - {user: fatih, repo: vim-go}
   tags:
     - homedir
     - repos
