@@ -22,7 +22,6 @@
     - {name: chamber, install_options: ""}
     - {name: cloc, install_options: ""}
     - {name: cmake, install_options: ""}
-    - {name: dep, install_options: ""}
     - {name: direnv, install_options: ""}
     - {name: dirmngr, install_options: ""}
     - {name: docker, install_options: ""}
