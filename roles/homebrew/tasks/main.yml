@@ -26,6 +26,7 @@
     - {name: dirmngr, install_options: ""}
     - {name: docker, install_options: ""}
     - {name: entr, install_options: ""}
+    - {name: exercism, install_options: ""}
     - {name: erlang, install_options: ""}
     - {name: freetype, install_options: ""}
     - {name: gawk, install_options: ""}
