@@ -57,6 +57,7 @@
     - {name: lolcat, install_options: ""}
     - {name: lzo, install_options: ""}
     - {name: mpfr, install_options: ""}
+    - {name: nmap, install_options: ""}
     - {name: node, install_options: ""}
     - {name: oniguruma, install_options: ""}
     - {name: openssl, install_options: ""}
