@@ -81,6 +81,7 @@
     - {user: scrooloose, repo: nerdtree}
     - {user: editorconfig, repo: editorconfig-vim}
     - {user: fatih, repo: vim-go}
+    - {user: prettier, repo: vim-prettier}
   tags:
     - homedir
     - repos
