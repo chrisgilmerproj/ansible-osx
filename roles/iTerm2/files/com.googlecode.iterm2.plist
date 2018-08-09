@@ -59,10 +59,12 @@
 	<true/>
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>1169 113 445 292 0 0 1680 1027 </string>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>1194 977 620 392 0 0 3008 1669 </string>
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>1316 175 796 473 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 103 1680 924 0 0 1680 1027 </string>
+	<string>0 80 1501 1589 0 0 3008 1669 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>25 118 1620 432 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -671,6 +673,10 @@
 	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>10DE21C4-71B2-4034-9305-5D80B1F9332E</string>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
+	<true/>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
+	<integer>0</integer>
 	<key>NoSyncPermissionToShowTip</key>
 	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
@@ -725,12 +731,14 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-06-22T16:31:28Z</date>
+	<date>2018-07-17T17:25:58Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
+	<key>findMode_iTerm</key>
+	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.1.6</string>
+	<string>3.1.7</string>
 </dict>
 </plist>
