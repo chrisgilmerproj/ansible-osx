@@ -6,13 +6,5 @@ ldflags: -L/usr/local/opt/readline/lib -L/usr/local/opt/openssl/lib
 pyflags: --enable-framework
 cc: clang
 versions:
-<<<<<<< HEAD
   - 3.7.2
   - 2.7.15
-=======
-  - 3.6.2
-  - 2.7.15
-  - 3.5.5
-  - 3.4.8
-  - 3.3.7
->>>>>>> 915fa0aa632b9d6da72e61fa43f3d4bd43971e08
