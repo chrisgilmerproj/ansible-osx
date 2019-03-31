@@ -16,6 +16,8 @@
 	<integer>1</integer>
 	<key>AppleWindowTabbingMode</key>
 	<string>manual</string>
+	<key>AutoHideTmuxClientSession</key>
+	<true/>
 	<key>Default Bookmark Guid</key>
 	<string>65B1E7A2-FF9B-4F23-BFA1-3B3E17255B22</string>
 	<key>HotkeyMigratedFromSingleToMulti</key>
@@ -59,14 +61,16 @@
 	<true/>
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>1169 113 445 292 0 0 1680 1027 </string>
+	<key>NSWindow Frame SUStatusFrame</key>
+	<string>1304 1177 400 129 0 0 3008 1669 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>1194 977 620 392 0 0 3008 1669 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>963 687 796 486 0 0 3008 1669 </string>
+	<string>1063 262 1018 447 0 0 3008 1669 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 80 1501 947 0 0 1680 1027 </string>
+	<string>0 80 1501 1589 0 0 3008 1669 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>1739 938 570 402 0 0 3008 1669 </string>
+	<string>1564 617 570 402 0 0 3008 1669 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>233 594 570 402 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
@@ -673,6 +677,10 @@
 			<string>/Users/cgilmer</string>
 		</dict>
 	</array>
+	<key>NoSyncHaveRequestedFullDiskAccess</key>
+	<true/>
+	<key>NoSyncHaveUsedCopyMode</key>
+	<true/>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
@@ -735,7 +743,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-09-04T16:38:34Z</date>
+	<date>2018-11-05T17:01:57Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
@@ -747,7 +755,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.2.0</string>
+	<string>3.2.5</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
