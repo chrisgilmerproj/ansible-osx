@@ -18,7 +18,13 @@ $ ansible-playbook playbooks/localhost.yml --check
 Then run with:
 
 ```sh
-$ ansible-playbook playbooks/localhost.yml --diff --ask-sudo-pass
+$ ansible-playbook playbooks/localhost.yml --diff -v --ask-become-pass
+```
+
+or
+
+```sh
+$ ansible-playbook playbooks/localhost.yml --diff -v --ask-become-pass --tags python --extra no_deps=True
 ```
 
 ## Quickstart

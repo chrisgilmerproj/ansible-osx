@@ -7,7 +7,7 @@
     LDFLAGS: "{{ldflags}}"
     PYTHON_CONFIGURE_OPTS: "{{pyflags}} --enable-framework=/Users/{{username}}/.pyenv/versions/{{item}}"
   with_items:
-    - 2.7.13
+    - 2.7.15
 
 - name: Install python versions (3.X)
   command: "pyenv install -s {{item}}"
@@ -17,16 +17,7 @@
     LDFLAGS: "{{ldflags}}"
     PYTHON_CONFIGURE_OPTS: "{{pyflags}} --enable-framework=/Users/{{username}}/.pyenv/versions/{{item}}"
   with_items:
-    - 3.6.1
-    - 3.5.3
-    - 3.4.6
-
-- name: Install python version (3.3)
-  command: "pyenv install -s {{item}}"
-  environment:
-    CC: "{{cc}}"
-  with_items:
-    - 3.3.6
+    - 3.7.2
 
 - name: Set global python
   command: "pyenv global {{versions | join(' ')}}"
@@ -34,13 +25,19 @@
 - name: Uninstall old python versions
   command: "pyenv uninstall -f {{item}}"
   with_items:
-    - 3.5.2
-    - 3.5.1
-    - 3.4.5
-    - 3.4.4
-    - 2.7.12
-    - 2.7.11
     - 2.6.9
+    - 2.7.11
+    - 2.7.12
+    - 2.7.13
+    - 2.7.14
+    - 3.3.6
+    - 3.4.4
+    - 3.4.5
+    - 3.4.6
+    - 3.5.1
+    - 3.5.2
+    - 3.5.3
+    - 3.6.1
 
 - name: Install Crypto Packages (2.7)
   pip: name="{{item}}"
@@ -83,10 +80,10 @@
     - pandas
     - jupyter
 
-- name: Install Python Packages (3.6, 3.5, 3.4)
+- name: Install Python Packages (3.7)
   pip: name="{{item[1]}}"
        state=latest
        executable="/Users/{{username}}/.pyenv/shims/{{item[0]}}"
   with_nested:
-    - ['pip3.6', 'pip3.5', 'pip3.4']
+    - ['pip3.7']
     - ['flake8', 'ipython', 'isort', 'powerline-status', 'tox', 'yapf']
