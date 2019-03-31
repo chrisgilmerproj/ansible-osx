@@ -3,3 +3,4 @@
 *.swp
 ansible.log
 src/
+*.DS_Store
