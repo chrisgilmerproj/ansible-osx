@@ -41,50 +41,56 @@
     - 3.6.5
 
 - name: Install Crypto Packages (2.7)
-  pip: name="{{item}}"
-       state=latest
-       executable="/Users/{{username}}/.pyenv/shims/pip2.7"
+  pip:
+    name:
+      - cryptography
+    state: latest
+    executable: "/Users/{{username}}/.pyenv/shims/pip2.7"
   environment:
     CFLAGS: "{{cflags}}"
     LDFLAGS: "{{ldflags}}"
-  with_items:
-    - cryptography
 
 - name: Install Python Packages (2.7)
-  pip: name="{{item}}"
-       state=latest
-       executable="/Users/{{username}}/.pyenv/shims/pip2.7"
-  with_items:
-    - pip
-    - virtualenv
-    - ansible
-    - awacs
-    - awscli
-    - boto
-    - boto3
-    - flake8
-    - ipython
-    - isort
-    - powerline-status
-    - tox
-    - troposphere
-    - yapf
+  pip:
+    name:
+      - pip
+      - virtualenv
+      - ansible
+      - awacs
+      - awscli
+      - boto
+      - boto3
+      - flake8
+      - ipython
+      - isort
+      - powerline-status
+      - tox
+      - troposphere
+      - yapf
+    state: latest
+    executable: "/Users/{{username}}/.pyenv/shims/pip2.7"
 
 - name: Install Python Science Packages (2.7)
-  pip: name="{{item}}"
-       state=latest
-       executable="/Users/{{username}}/.pyenv/shims/pip2.7"
-  with_items:
-    - numpy
-    - scipy
-    - matplotlib
-    - pandas
-    - jupyter
+  pip:
+    name:
+      - numpy
+      - scipy
+      - matplotlib
+      - pandas
+      - jupyter
+    state: latest
+    executable: "/Users/{{username}}/.pyenv/shims/pip2.7"
 
 - name: Install Python Packages (3.7)
-  pip: name="{{item[1]}}"
-       state=latest
-       executable="/Users/{{username}}/.pyenv/shims/{{item[0]}}"
-  with_nested:
-    - ['pip3.7']
-    - ['flake8', 'ipython', 'isort', 'powerline-status', 'tox', 'yapf']
+  pip:
+    name:
+      - flake8
+      - ipython
+      - isort
+      - powerline-status
+      - tox
+      - yapf
+    state: latest
+    executable: "/Users/{{username}}/.pyenv/shims/{{item}}"
+  with_items:
+    - pip3.7

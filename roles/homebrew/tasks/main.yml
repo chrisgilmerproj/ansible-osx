@@ -23,7 +23,6 @@
     - {name: cloc, install_options: ""}
     - {name: cmake, install_options: ""}
     - {name: direnv, install_options: ""}
-    - {name: dirmngr, install_options: ""}
     - {name: docker, install_options: ""}
     - {name: entr, install_options: ""}
     - {name: erlang, install_options: ""}
@@ -37,7 +36,6 @@
     - {name: gmp, install_options: ""}
     - {name: gnupg, install_options: ""}
     - {name: go, install_options: ""}
-    - {name: gpg-agent, install_options: ""}
     - {name: graphviz, install_options: ""}
     - {name: grep, install_options: "with-default-names"}
     - {name: icu4c, install_options: ""}
