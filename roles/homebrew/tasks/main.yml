@@ -3,6 +3,13 @@
   command: xcode-select --install
   ignore_errors: True
 
+- name: Tap homebrew
+  homebrew_tap:
+    name: "{{item}}"
+  with_items:
+    - homebrew/bundle
+    - homebrew/services
+
 - name: Install homebrew packages
   homebrew:
     name: "{{item.name}}"
@@ -11,31 +18,84 @@
     - {name: autoconf, install_options: ""}
     - {name: automake, install_options: ""}
     - {name: bash, install_options: ""}
+    - {name: bats, install_options: ""}
+    - {name: chamber, install_options: ""}
+    - {name: cloc, install_options: ""}
     - {name: cmake, install_options: ""}
+    - {name: direnv, install_options: ""}
+    - {name: dirmngr, install_options: ""}
+    - {name: docker, install_options: ""}
+    - {name: entr, install_options: ""}
     - {name: erlang, install_options: ""}
     - {name: freetype, install_options: ""}
+    - {name: gawk, install_options: ""}
     - {name: gcc, install_options: ""}
+    - {name: gdbm, install_options: ""}
+    - {name: gettext, install_options: ""}
     - {name: git, install_options: ""}
+    - {name: git-secrets, install_options: ""}
+    - {name: gmp, install_options: ""}
+    - {name: gnupg, install_options: ""}
+    - {name: go, install_options: ""}
+    - {name: gpg-agent, install_options: ""}
+    - {name: graphviz, install_options: ""}
     - {name: grep, install_options: "with-default-names"}
+    - {name: icu4c, install_options: ""}
     - {name: ipcalc, install_options: ""}
+    - {name: isl, install_options: ""}
     - {name: jpeg, install_options: ""}
     - {name: jq, install_options: ""}
+    - {name: libidn2, install_options: ""}
+    - {name: libmpc, install_options: ""}
     - {name: libpng, install_options: ""}
     - {name: libtiff, install_options: ""}
     - {name: libtool, install_options: ""}
+    - {name: libunistring, install_options: ""}
+    - {name: libusb-compat, install_options: ""}
     - {name: libyaml, install_options: ""}
     - {name: little-cms, install_options: ""}
-    - {name: ossp-uuid, install_options: ""}
+    - {name: lolcat, install_options: ""}
+    - {name: lzo, install_options: ""}
+    - {name: mpfr, install_options: ""}
+    - {name: nmap, install_options: ""}
+    - {name: node, install_options: ""}
+    - {name: oniguruma, install_options: ""}
     - {name: openssl, install_options: ""}
+    - {name: ossp-uuid, install_options: ""}
+    - {name: pandoc, install_options: ""}
+    - {name: pcre, install_options: ""}
+    - {name: perl, install_options: ""}
     - {name: pkg-config, install_options: ""}
+    - {name: postgresql, install_options: ""}
+    - {name: pre-commit, install_options: ""}
     - {name: pwgen, install_options: ""}
     - {name: pyenv, install_options: ""}
+    - {name: pyenv-virtualenv, install_options: ""}
+    - {name: python, install_options: ""}
     - {name: readline, install_options: ""}
+    - {name: ripgrep, install_options: ""}
+    - {name: ruby, install_options: ""}
     - {name: screen, install_options: ""}
+    - {name: shellcheck, install_options: ""}
+    - {name: sqlite, install_options: ""}
     - {name: ssh-copy-id, install_options: ""}
+    - {name: terraform, install_options: ""}
+    - {name: terraform-docs, install_options: ""}
+    - {name: thefuck, install_options: ""}
     - {name: vim, install_options: "with-python3"}
     - {name: watch, install_options: ""}
+    - {name: watchman, install_options: ""}
     - {name: wget, install_options: ""}
+    - {name: wxmac, install_options: ""}
+    - {name: xz, install_options: ""}
+    - {name: yarn, install_options: ""}
+
+- name: Install homebrew cask packages
+  homebrew_cask:
+    name: "{{item.name}}"
+    install_options: "{{item.install_options}}"
+  with_items:
+    - {name: aws-vault, install_options: ""}
 
 - name: Update Homebrew and Upgrade Packages
   homebrew: update_homebrew=yes

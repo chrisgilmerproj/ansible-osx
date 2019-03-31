@@ -38,6 +38,7 @@
     - 3.5.2
     - 3.5.3
     - 3.6.1
+    - 3.6.5
 
 - name: Install Crypto Packages (2.7)
   pip: name="{{item}}"

@@ -4,9 +4,10 @@ echo
 echo "Install ansible and required python requirements"
 sudo pip install -r requirements/python.txt
 
-echo
-echo "Install ansible galaxy requirements"
-ansible-galaxy install -r requirements/galaxy.yml -p galaxy/
+# Uncomment when actually using galaxy deps
+#echo
+#echo "Install ansible galaxy requirements"
+#ansible-galaxy install -r requirements/galaxy.yml -p galaxy/
 
 echo
 echo "Touch the Ansible Vault secrets file in ~/.vault_pass_local.txt"

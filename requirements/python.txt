@@ -1,4 +1,4 @@
-ansible==2.2.0.0
+ansible==2.5.5
 ansible-lint==3.4.7
 ansigenome==0.5.6
 cryptography>=1.7.1
