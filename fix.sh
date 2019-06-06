@@ -1,3 +1,3 @@
 #! /bin/bash -ex
 
-ansible-playbook playbooks/localhost.yml --diff --ask-sudo-pass -v
+ansible-playbook playbooks/localhost.yml --diff -v --ask-become-pass
