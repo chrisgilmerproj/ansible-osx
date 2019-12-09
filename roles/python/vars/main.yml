@@ -1,10 +1,10 @@
 # CFLAGS="-I$(brew --prefix openssl)/include -I$(brew --prefix readline)/include -I$(xcrun --show-sdk-path)/usr/include"
 # LDFLAGS="-L$(brew --prefix openssl)/lib -L$(brew --prefix readline)/lib"
 
-cflags: -I/usr/local/opt/readline/include -I/usr/local/opt/openssl/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include
-ldflags: -L/usr/local/opt/readline/lib -L/usr/local/opt/openssl/lib
+cflags: -I/usr/local/opt/readline/include -I/usr/local/opt/openssl@1.1/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include
+ldflags: -L/usr/local/opt/readline/lib -L/usr/local/opt/openssl@1.1/lib
 pyflags: --enable-framework
 cc: clang
 versions:
-  - 3.7.2
-  - 2.7.15
+  - 3.8.0
+  - 2.7.17
