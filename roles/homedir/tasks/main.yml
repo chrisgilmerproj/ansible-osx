@@ -83,6 +83,7 @@
     - {user: editorconfig, repo: editorconfig-vim}
     - {user: fatih, repo: vim-go}
     - {user: prettier, repo: vim-prettier}
+    - {user: rust-lang, repo: rust.vim}
   tags:
     - homedir
     - repos
