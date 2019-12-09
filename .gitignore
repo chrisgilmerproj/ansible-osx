@@ -4,3 +4,4 @@
 ansible.log
 src/
 *.DS_Store
+.venv
