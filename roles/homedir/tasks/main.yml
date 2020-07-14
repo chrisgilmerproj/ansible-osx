@@ -78,12 +78,12 @@
        force=yes
        accept_hostkey=True
   with_items:
-    - {user: scrooloose, repo: syntastic}
-    - {user: scrooloose, repo: nerdtree}
+    - {user: dense-analysis, repo: ale}
     - {user: editorconfig, repo: editorconfig-vim}
     - {user: fatih, repo: vim-go}
     - {user: prettier, repo: vim-prettier}
     - {user: rust-lang, repo: rust.vim}
+    - {user: scrooloose, repo: nerdtree}
   tags:
     - homedir
     - repos
