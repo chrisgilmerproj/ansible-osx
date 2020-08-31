@@ -5,8 +5,7 @@ set -eux -o pipefail
 # brew install readline xz openssl
 
 PYENV_ROOT="$(pyenv root)"
-# VERSION=2.7.17
-VERSION=3.8.0
+VERSION=3.8.5
 mkdir -p "${PYENV_ROOT}/versions/${VERSION}"
 
 CFLAGS="-I$(brew --prefix readline)/include -I$(brew --prefix openssl)/include -I$(xcrun --show-sdk-path)/usr/include" \
