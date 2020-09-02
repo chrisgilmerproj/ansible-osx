@@ -33,6 +33,7 @@
     - .npmrc
     - .psqlrc
     - .pypirc
+    - .ripgreprc
     - .screenrc
     - .tmux.conf
     - .vimrc
